@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta name="author" content="">
 <meta name="created" content="2012-08-16">
-<meta name="modified" content="Thu 16 Aug 2012 10:48:40 AM EDT">
+<meta name="modified" content="Sat 18 Aug 2012 10:46:28 AM EDT">
 <title> CSS3 keyframes solution</title>
-<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./stylesheets//bootstrap.min.css">
+<link rel="stylesheet" id="appendCSS" href="./stylesheets//style.css">
 <style type="text/css">
 body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -14,6 +15,9 @@ body {
 textarea{
   width: 100%;
   height: 500px;
+}
+#go{
+  float:right;
 }
 
 
@@ -28,7 +32,7 @@ textarea{
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">CSS3 keyframes solution</a>
+          <a class="brand" href="#">CSS3 keyframes fallback solution</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -42,16 +46,24 @@ textarea{
 
     <div class="container">
 
-      <h1>Insert your CSS here</h1>
-      <textarea></textarea>
+      <div class="row">
+        <div class="span6">
+          <h1>Insert your CSS here</h1>
+          <textarea id="css"></textarea>
+          <button class="btn" id="go">Go!</button>
+        </div>
+        <div class="span6">
+          <h1>javascript Object</h1>
+          <textarea id="js"></textarea>
+        </div>
+      </div>
 
     </div> <!-- /container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>
-    $(document).ready(function(){
-
-    });
+    var require = {"baseUrl":'javascript'}
     </script>
+    <script data-main="main" src="http://requirejs.org/docs/release/2.0.5/minified/require.js"></script>
 </body>
 </html>

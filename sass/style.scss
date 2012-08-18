@@ -1,0 +1,59 @@
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin animation($type: fadeIn, $duration: 1s, $delay: 0, $timing: ease, $infinite: 1, $direction: normal){
+  animation: $type $duration $infinite;
+  -moz-animation : $type $duration $infinite;
+  -webkit-animation : $type $duration $infinite;
+  -ms-animation : $type $duration $infinite;
+  -o-animation: $type $duration $infinite;
+}
+#lala{
+  margin-top:40px;
+  width:100px;
+  height:100px;
+  background:red;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#lala.move{
+  @include animation(move, 2S, 0, ease, infinite);
+}
+
+@include keyframes(move){
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 100px;
+    top: 0px;
+  }
+  50% {
+    left: 100px;
+    top: 100px;
+  }
+  75% {
+    left: 0px;
+    top: 100px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}

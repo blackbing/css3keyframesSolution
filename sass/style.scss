@@ -22,16 +22,15 @@
   -ms-animation : $type $duration $infinite;
   -o-animation: $type $duration $infinite;
 }
-#lala{
-  margin-top:40px;
+.demo{
   width:100px;
   height:100px;
   background:red;
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 0px;
 }
-#lala.move{
+.demo.move{
   @include animation(move, 2S, 0, ease, infinite);
 }
 
@@ -41,11 +40,11 @@
     top: 0px;
   }
   25% {
-    left: 100px;
+    left: 300px;
     top: 0px;
   }
   50% {
-    left: 100px;
+    left: 300px;
     top: 100px;
   }
   75% {

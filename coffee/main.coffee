@@ -1,6 +1,7 @@
 require([
   'module'
-], (module)->
+  './keyframes'
+], (module, KeyFrames)->
 
   appendCSSID = "appendCSS"
   styleSheets = document.styleSheets
@@ -26,12 +27,15 @@ require([
     objText = 'var keyFrames = \n' + objText
     $('#js').text(objText)
 
+    initialTest(cssObjects)
+
 
   writeCSS = (styleSheets)->
     text = []
     for cssRules in styleSheets.cssRules
       text.push(cssRules.cssText)
     $('#css').text(text.join('\n'))
+
 
 
 
@@ -64,6 +68,11 @@ require([
           if cssRules.type is 7
             addRule(cssRules)
 
+  initialTest = (keyFrames)->
+    KeyFrames.set($('.keyframes-fallback'), keyFrames.move, 2000);
+
+
+
 
   $('#go').click( ->
     addCSSFile().done(->
@@ -71,6 +80,8 @@ require([
     )
   )
   parseToJSObject()
+
+
 
 
 )

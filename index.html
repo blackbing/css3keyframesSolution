@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="author" content="">
 <meta name="created" content="2012-08-16">
-<meta name="modified" content="Sat 18 Aug 2012 01:44:10 PM EDT">
+<meta name="modified" content="Mon 20 Aug 2012 06:09:57 AM EDT">
 <title> CSS3 keyframes solution</title>
 <link rel="stylesheet" href="./stylesheets//bootstrap.min.css">
 <link rel="stylesheet" id="appendCSS" href="./stylesheets//style.css">
@@ -13,13 +13,18 @@ body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 }
 textarea{
-  width: 100%;
+  width: 98%;
   height: 500px;
 }
 #go{
   float:right;
 }
 
+.canvas{
+  outline: 1px dotted grey;
+  width: 100%;
+  height: 200px;
+}
 
 </style>
 </head>
@@ -57,11 +62,17 @@ textarea{
         <div class="span6">
           <h1>Insert your CSS here</h1>
           <textarea id="css"></textarea>
+          <div class="canvas">
+            <div class="demo move ">.demo.move</div>
+          </div>
           <button class="btn" id="go">Go!</button>
         </div>
         <div class="span6">
           <h1>javascript Object</h1>
           <textarea id="js"></textarea>
+          <div class="canvas">
+            <div class="demo keyframes-fallback">demo keyframes-fallback</div>
+          </div>
         </div>
       </div>
 

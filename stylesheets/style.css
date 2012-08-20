@@ -1,16 +1,15 @@
 /* line 25, ../sass/style.scss */
-#lala {
-  margin-top: 40px;
+.demo {
   width: 100px;
   height: 100px;
   background: red;
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 0px;
 }
 
-/* line 34, ../sass/style.scss */
-#lala.move {
+/* line 33, ../sass/style.scss */
+.demo.move {
   animation: move 2S infinite;
   -moz-animation: move 2S infinite;
   -webkit-animation: move 2S infinite;
@@ -19,31 +18,31 @@
 }
 
 @-webkit-keyframes move {
-  /* line 39, ../sass/style.scss */
+  /* line 38, ../sass/style.scss */
   0% {
     left: 0px;
     top: 0px;
   }
 
-  /* line 43, ../sass/style.scss */
+  /* line 42, ../sass/style.scss */
   25% {
-    left: 100px;
+    left: 300px;
     top: 0px;
   }
 
-  /* line 47, ../sass/style.scss */
+  /* line 46, ../sass/style.scss */
   50% {
-    left: 100px;
+    left: 300px;
     top: 100px;
   }
 
-  /* line 51, ../sass/style.scss */
+  /* line 50, ../sass/style.scss */
   75% {
     left: 0px;
     top: 100px;
   }
 
-  /* line 55, ../sass/style.scss */
+  /* line 54, ../sass/style.scss */
   100% {
     left: 0px;
     top: 0px;
@@ -51,31 +50,31 @@
 }
 
 @-moz-keyframes move {
-  /* line 39, ../sass/style.scss */
+  /* line 38, ../sass/style.scss */
   0% {
     left: 0px;
     top: 0px;
   }
 
-  /* line 43, ../sass/style.scss */
+  /* line 42, ../sass/style.scss */
   25% {
-    left: 100px;
+    left: 300px;
     top: 0px;
   }
 
-  /* line 47, ../sass/style.scss */
+  /* line 46, ../sass/style.scss */
   50% {
-    left: 100px;
+    left: 300px;
     top: 100px;
   }
 
-  /* line 51, ../sass/style.scss */
+  /* line 50, ../sass/style.scss */
   75% {
     left: 0px;
     top: 100px;
   }
 
-  /* line 55, ../sass/style.scss */
+  /* line 54, ../sass/style.scss */
   100% {
     left: 0px;
     top: 0px;
@@ -83,31 +82,31 @@
 }
 
 @-ms-keyframes move {
-  /* line 39, ../sass/style.scss */
+  /* line 38, ../sass/style.scss */
   0% {
     left: 0px;
     top: 0px;
   }
 
-  /* line 43, ../sass/style.scss */
+  /* line 42, ../sass/style.scss */
   25% {
-    left: 100px;
+    left: 300px;
     top: 0px;
   }
 
-  /* line 47, ../sass/style.scss */
+  /* line 46, ../sass/style.scss */
   50% {
-    left: 100px;
+    left: 300px;
     top: 100px;
   }
 
-  /* line 51, ../sass/style.scss */
+  /* line 50, ../sass/style.scss */
   75% {
     left: 0px;
     top: 100px;
   }
 
-  /* line 55, ../sass/style.scss */
+  /* line 54, ../sass/style.scss */
   100% {
     left: 0px;
     top: 0px;
@@ -115,31 +114,31 @@
 }
 
 @-o-keyframes move {
-  /* line 39, ../sass/style.scss */
+  /* line 38, ../sass/style.scss */
   0% {
     left: 0px;
     top: 0px;
   }
 
-  /* line 43, ../sass/style.scss */
+  /* line 42, ../sass/style.scss */
   25% {
-    left: 100px;
+    left: 300px;
     top: 0px;
   }
 
-  /* line 47, ../sass/style.scss */
+  /* line 46, ../sass/style.scss */
   50% {
-    left: 100px;
+    left: 300px;
     top: 100px;
   }
 
-  /* line 51, ../sass/style.scss */
+  /* line 50, ../sass/style.scss */
   75% {
     left: 0px;
     top: 100px;
   }
 
-  /* line 55, ../sass/style.scss */
+  /* line 54, ../sass/style.scss */
   100% {
     left: 0px;
     top: 0px;
@@ -147,31 +146,31 @@
 }
 
 @keyframes move {
-  /* line 39, ../sass/style.scss */
+  /* line 38, ../sass/style.scss */
   0% {
     left: 0px;
     top: 0px;
   }
 
-  /* line 43, ../sass/style.scss */
+  /* line 42, ../sass/style.scss */
   25% {
-    left: 100px;
+    left: 300px;
     top: 0px;
   }
 
-  /* line 47, ../sass/style.scss */
+  /* line 46, ../sass/style.scss */
   50% {
-    left: 100px;
+    left: 300px;
     top: 100px;
   }
 
-  /* line 51, ../sass/style.scss */
+  /* line 50, ../sass/style.scss */
   75% {
     left: 0px;
     top: 100px;
   }
 
-  /* line 55, ../sass/style.scss */
+  /* line 54, ../sass/style.scss */
   100% {
     left: 0px;
     top: 0px;

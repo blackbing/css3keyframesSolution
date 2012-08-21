@@ -2,7 +2,7 @@
 (function() {
 
   require(['module', './keyframes'], function(module, KeyFrames) {
-    var addCSSFile, addRule, appendCSSID, cssObjects, initialTest, parseToJSObject, styleSheets, writeCSS;
+    var addCSSFile, addRule, appendCSSID, cssObjects, parseToJSObject, styleSheets, writeCSS;
     appendCSSID = "appendCSS";
     styleSheets = document.styleSheets;
     cssObjects = {};
@@ -25,8 +25,10 @@
       cssObjects[cssRules.name] = cssObj;
       objText = JSON.stringify(cssObjects);
       objText = 'var keyFrames = \n' + objText;
+      objText += ";\nvar setKeyFrames = function($el, frames, duration) {\n    var animate;\n    animate = function() {\n        var spendTime;\n        spendTime = 0;\n        $el.stop(true);\n        $.each(frames, function(idx, val) {\n            var stepDuration, stepPercentage;\n            stepPercentage = idx.replace('%', '') / 100;\n            stepDuration = duration * stepPercentage - spendTime;\n            $el.animate(val, stepDuration);\n            return spendTime += stepDuration;\n        });\n        return setTimeout(animate, duration);\n    };\n    return animate();\n};\n$(document).ready(function(){\n    setKeyFrames($('.keyframes-fallback'), keyFrames.move, 2000);\n});\n    ";
       $('#js').text(objText);
-      return initialTest(cssObjects);
+      console.log(KeyFrames);
+      return console.log(JSON.stringify(KeyFrames));
     };
     writeCSS = function(styleSheets) {
       var cssRules, text, _i, _len, _ref;
@@ -84,9 +86,6 @@
         }
       }
       return _results;
-    };
-    initialTest = function(keyFrames) {
-      return KeyFrames.set($('.keyframes-fallback'), keyFrames.move, 2000);
     };
     $('#go').click(function() {
       return addCSSFile().done(function() {

@@ -25,9 +25,34 @@ require([
     objText = JSON.stringify(cssObjects)
 
     objText = 'var keyFrames = \n' + objText
-    $('#js').text(objText)
 
-    initialTest(cssObjects)
+    objText += ";\n
+var setKeyFrames = function($el, frames, duration) {\n
+    var animate;\n
+    animate = function() {\n
+        var spendTime;\n
+        spendTime = 0;\n
+        $el.stop(true);\n
+        $.each(frames, function(idx, val) {\n
+            var stepDuration, stepPercentage;\n
+            stepPercentage = idx.replace('%', '') / 100;\n
+            stepDuration = duration * stepPercentage - spendTime;\n
+            $el.animate(val, stepDuration);\n
+            return spendTime += stepDuration;\n
+        });\n
+        return setTimeout(animate, duration);\n
+    };\n
+    return animate();\n
+};\n
+$(document).ready(function(){\n
+    setKeyFrames($('.keyframes-fallback'), keyFrames.move, 2000);\n
+});\n
+    "
+
+    $('#js').text(objText)
+    console.log(KeyFrames)
+    console.log(JSON.stringify(KeyFrames))
+
 
 
   writeCSS = (styleSheets)->
@@ -68,8 +93,6 @@ require([
           if cssRules.type is 7
             addRule(cssRules)
 
-  initialTest = (keyFrames)->
-    KeyFrames.set($('.keyframes-fallback'), keyFrames.move, 2000);
 
 
 
